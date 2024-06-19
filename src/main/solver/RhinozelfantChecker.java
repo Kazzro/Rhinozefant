@@ -31,15 +31,11 @@ public class RhinozelfantChecker {
         int pixelColor = image.getRGB(x, y);
         int matchCount = 0;
 
-        // Überprüfe die Pixel in der Umgebung (nach oben, unten, links und rechts)
         if (x > 0 && image.getRGB(x - 1, y) == pixelColor) matchCount++;
         if (x < image.getWidth() - 1 && image.getRGB(x + 1, y) == pixelColor) matchCount++;
         if (y > 0 && image.getRGB(x, y - 1) == pixelColor) matchCount++;
         if (y < image.getHeight() - 1 && image.getRGB(x, y + 1) == pixelColor) matchCount++;
 
-        // Wenn die meisten Nachbarpixel dieselbe Farbe haben, könnte es ein Rhinozelfant-Pixel sein
         return matchCount >= maxMatches;
-
-
     }
 }
