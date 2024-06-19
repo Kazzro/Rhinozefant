@@ -8,11 +8,11 @@ import main.solver.RhinozelfantChecker;
 public class Main {
 
     public static void main(String[] args) {
-        BufferedImage image = ImageLoader.loadImage("rhinozelfant1.png");
-
-        BufferedImage out = RhinozelfantChecker.solve(image,2);
-
-        ImageWriter.saveImage("rhinozefantOut.png", out);
+        for (int i = 1; i < 10; i++) {
+            BufferedImage image = ImageLoader.loadImage("rhinozelfant"+ i +".png");
+            BufferedImage out = RhinozelfantChecker.solve(image,2);
+            ImageWriter.saveImage("rhinozefantOut.png", out);
+        }
 
     }
 }
