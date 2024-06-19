@@ -3,7 +3,7 @@ package main.data;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
+
 
 public class ImageLoader {
 
@@ -17,7 +17,7 @@ public class ImageLoader {
         }
         catch(Exception e) {
             e.printStackTrace();
-        };
+        }
 
         return image;
 

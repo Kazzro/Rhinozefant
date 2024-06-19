@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ImageWriter {
     final static String directory = "ressources/output/";
-    public static boolean saveImage(String filename, BufferedImage image){
+    public static void saveImage(String filename, BufferedImage image){
 
         File output = new File(directory + filename);
         try {
@@ -15,7 +15,7 @@ public class ImageWriter {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return true;
+
 
     }
 }
